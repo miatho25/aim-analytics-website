@@ -55,10 +55,12 @@
   }
   .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
   .nav-logo-icon {
-    width: 42px; height: 42px;
-    background: linear-gradient(135deg, var(--purple), var(--purple-light));
-    border-radius: 10px; display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; padding: 4px;
+    width: 38px; height: 38px;
+    border-radius: 9px; flex-shrink: 0;
+    overflow: hidden;
+  }
+  .nav-logo-icon img {
+    width: 100%; height: 100%; object-fit: contain;
   }
   .nav-logo-text { font-size: 1.2rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
   .nav-logo-text span {
@@ -399,7 +401,8 @@
   footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 5%; }
   .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
   .footer-logo { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 800; color: #fff; }
-  .footer-logo-icon { width: 30px; height: 30px; background: linear-gradient(135deg, var(--purple), var(--purple-light)); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 900; color: #fff; }
+  .footer-logo-icon { width: 30px; height: 30px; border-radius: 7px; overflow: hidden; }
+  .footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
   .footer-logo span { background: linear-gradient(135deg, var(--purple), var(--purple-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
   .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
@@ -471,7 +474,7 @@
 
 <!-- URGENCY BANNER -->
 <div class="urgency-banner" id="urgency-banner">
-  <span>⚡ Limited Spring Forward Offer: For the month of April Only — <strong>$999 Starter Install</strong> (normally $1,500)</span>
+  <span>⚡ Limited Spring Offer: — <strong>$999 Starter Install</strong> (normally $1,500)</span>
   <a href="#contact">Claim Your Spot</a>
   <button class="urgency-banner-close" onclick="document.getElementById('urgency-banner').remove();document.body.classList.remove('has-banner');">✕</button>
 </div>
